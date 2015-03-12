@@ -1,0 +1,27 @@
+       // Converts Decimal to Binary
+
+import java.io.*;
+
+public class DecimalToBinary
+{
+        public void printBinaryFormat(int m)
+        {
+                int c=0;
+                int[] a= new int[100];
+                //System.out.println("Enter number to convert Decimal to Binary");
+                for(int i=0;m>0;i++)
+                {
+                        a[c++]=m%2;
+                        m=m/2;
+                }
+                for(int i=(c-1);c>=0;i--)
+                System.out.print(a[i]);
+                //System.out.println();
+        }
+
+        public static void main(String args[])
+        {
+                DecimalToBinary dtb = new DecimalToBinary();
+                dtb.printBinaryFormat(19);
+        }
+}
